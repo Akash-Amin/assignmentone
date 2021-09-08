@@ -1,0 +1,46 @@
+
+.Header-logo-img
+{
+    
+    height: 80px;
+    width: 80px;
+    border-radius: 20px;
+}
+.Header-main
+{
+    display: flex;
+    background-color: rgb(5, 5, 5);
+    padding: 4px;
+}
+.Header-detail
+{
+    display: block;
+    padding: 20px;
+    padding-left: 6px;
+}
+
+.Header-company-name
+{
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+    
+    color: rgb(250, 249, 246);
+}
+
+.header-company-experience
+{
+    font-size: 15px;
+    font-weight: 800;
+    
+    color: rgb(250, 184, 3);
+    cursor: pointer;
+}
+
+.Header-logo-img
+{
+   padding: 10px;
+   margin-left: 5px;
+   
+   
+}

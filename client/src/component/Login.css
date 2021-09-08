@@ -1,0 +1,79 @@
+*{
+    margin: 0px;
+}
+.Login-main
+{
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    justify-content: center;
+
+}
+/*.Login-side-img
+{
+    padding: 100px;
+    border: 20px solid black;
+    background-color: blue;
+    margin-top: 20px;
+}*/
+.Login-entry-box
+{
+    
+    padding: 100px;
+    padding-top: 70px;
+    border: 4px solid black;
+    background-color: rgb(46, 46, 48);
+    
+    margin: 60px;
+
+    border-radius: 50px;
+background: #5c5757;
+box-shadow: inset 21px 21px 13px #252323,
+            inset -21px -21px 13px #8f8b8b;
+}
+.Login-input
+{
+    font-size: 25px;
+    margin: 4px;
+    text-align: center;
+    font-weight: 600;
+    background-color: rgb(59, 46, 46);
+    color: rgb(243, 241, 237);
+}
+.Login-input-button
+{
+    font-size: 25px;
+    width: 60%;
+    margin-left: 20%;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: rgb(4, 248, 4);
+    border: 2px solid black;
+    color: rgb(54, 30, 5);
+
+}
+.Login-input-button:hover
+{
+    background-color: rgb(3, 49, 3);
+}
+.Login-message
+{
+    text-align: center;
+    font-weight: 900;
+    padding: 10px;
+    
+    color: rgb(250, 159, 3);
+    background-color: rgb(51, 50, 50);
+    border: 2px solid black;
+
+    
+background: linear-gradient(145deg, #625d5d, #534e4e);
+box-shadow:  11px 11px 13px #252323,
+             -11px -11px 13px #131313;
+}
+.Login-footer
+{
+    background-color: black;
+    text-align: center;
+    font-size: 40px;
+    color: rgb(189, 178, 178);
+}
