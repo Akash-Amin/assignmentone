@@ -1,34 +1,82 @@
-*{
+/**{
     margin: 0px;
 }
 .Login-main
 {
-    background-color: rgb(43, 42, 42);
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    
+    background: url("./back.jpg");
+}
+.Login-side-img
+{
+    margin-top: 20px;
+}
+.Login-entry-box
+{
+    text-align: center;
+    background-color: grey;
 
 }
-/*.Login-side-img
+.Login-peoples-icon
+{
+    size: 30px;
+    height: 40px;
+    width: 40px;
+    font-size: 60px;
+    
+    font-size: 50px !important;
+    background: none;
+    color:rgb(253, 251, 251);
+    justify-content: center;
+}
+.Login-side-img
 {
     padding: 100px;
     border: 20px solid black;
     background-color: blue;
     margin-top: 20px;
-}*/
+}
 .Login-entry-box
 {
     
     padding: 100px;
     padding-top: 70px;
     border: 4px solid black;
-    background-color: rgb(46, 46, 48);
     
     margin: 60px;
 
     border-radius: 50px;
-background: #5c5757;
-box-shadow: inset 21px 21px 13px #252323,
-            inset -21px -21px 13px #8f8b8b;
+    
+    background-color: rgb(23, 23, 24);
+
+box-shadow: inset 21px 21px 43px #0a0a0a,
+            inset -21px -21px 43px #424141;
+}
+.Login-side-img
+{
+    
+    border: 4px solid black;
+    
+    margin: 60px;
+    justify-content: center;
+    border-radius: 50px;
+
+}
+.Login-side-img
+{
+    border: 10px solid black;
+    text-align: center;
+    padding: 30px;
+    padding-top: 90px;
+}
+.Login-entry-box
+{
+    border: 10px solid green;
+    padding: 130px;
 }
 .Login-input
 {
@@ -36,8 +84,17 @@ box-shadow: inset 21px 21px 13px #252323,
     margin: 4px;
     text-align: center;
     font-weight: 600;
-    background-color: rgb(59, 46, 46);
+    background-color: rgb(75, 62, 62);
     color: rgb(243, 241, 237);
+    border: 0px;
+    
+}
+
+.Login-input:hover
+{
+    background-color: rgb(17, 16, 16);
+   
+    
 }
 .Login-input-button
 {
@@ -47,7 +104,8 @@ box-shadow: inset 21px 21px 13px #252323,
     font-weight: 900;
     cursor: pointer;
     background-color: rgb(4, 248, 4);
-    border: 2px solid black;
+    border: 6px solid rgb(30, 75, 7);
+    border-radius: 8px;
     color: rgb(54, 30, 5);
 
 }
@@ -62,13 +120,13 @@ box-shadow: inset 21px 21px 13px #252323,
     padding: 10px;
     
     color: rgb(250, 159, 3);
-    background-color: rgb(51, 50, 50);
-    border: 2px solid black;
+    background-color: rgb(12, 12, 12);
+    border: 3px solid black;
 
     
-background: linear-gradient(145deg, #625d5d, #534e4e);
-box-shadow:  11px 11px 13px #252323,
-             -11px -11px 13px #131313;
+background: linear-gradient(145deg, #161616, #534e4e);
+box-shadow:  11px 11px 13px #202020,
+             -11px -11px 13px #080000;
 }
 .Login-footer
 {
@@ -77,3 +135,4 @@ box-shadow:  11px 11px 13px #252323,
     font-size: 40px;
     color: rgb(189, 178, 178);
 }
+*/

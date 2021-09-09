@@ -1,6 +1,10 @@
-import React,{useState} from 'react';
+/*import React,{useState} from 'react';
 import logo from "./download.jpg";
 import "./Login.css";
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import PermIdentityOutlinedIcon from '@material-ui/icons/PermIdentityOutlined';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import EmailOutlinedIcon from '@material-ui/icons/EmailOutlined';
 
  function Login(){
 
@@ -19,31 +23,40 @@ import "./Login.css";
         setUserId(e.target.value);
     }
     function passwordchange(e)
-    {
+    { 
         setPassword(e.target.value);
     }
      
     return (
         <>
         <div className="Login-main">
-       {/* <div className="Login-side-img">
+        <div className="Login-side-img">
+        <h3>CAPITAL TRUST LIMITED</h3>
             <img src={logo}/>
-        </div>*/}
+            
+        </div>
         <div className="Login-entry-box">
-        <h1 className="Login-message">Login to your account </h1>
+        <PeopleAltIcon className="Login-peoples-icon"/> 
         <br/><br/>
         
             <form onSubmit={loginSubmission}>
+            
+            <PermIdentityOutlinedIcon/>
+            
                 <input type="email" placeholder="User Id" onChange={userIdchange}  className="Login-input" required/>
                 <br/> <br/>
+               
+                <LockOutlinedIcon />
+                
                 <input type="password" placeholder="Password"  onChange={passwordchange}  className="Login-input" required/>
+                <input type="checkbox" required/>
                 <br/><br/>
+                <EmailOutlinedIcon/>
                 <button className="Login-input-button">Login</button>
             </form>
             </div>
         </div>
-        <h3 className="Login-footer">footer</h3>
         </>
     )
 }
-export default Login;
+export default Login;*/

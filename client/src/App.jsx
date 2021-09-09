@@ -1,29 +1,32 @@
 import React from 'react';
-import Login from './component/Login';
-import Header from './component/header/Header';
+import Landingpage from './component/landingpage/Landingpage';
+//import Home from './component/home/Home';
+//import About from './component/about/About';
+//import Products from './component/products/Products';
+//import Contact from './component/contact/Contact';
+//import Header from './component/header/Header';
 
 //import Header from './component/Header';
-//import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Switch ,Route,Redirect} from 'react-router-dom';
 //import Navlink from './component/controll/Navlink';
 //import Home from './component/Home';
 //import { Route, Switch } from "react-router-dom";
 
-export default function App() {
+const App=()=> {
     return (
         <>
         
-        <Header/>
-        <Login/>
-           {/*} <Header />
             <BrowserRouter>
-                <Navlink />
                 <Switch>
-                    <Route exact path="/login" component={Login} />
-
-                    <Route exact path="/home" component={Home} />
+                <Route exact path="/" component={Landingpage} />
+                    {/* <Route exact path="/home" component={Home} />
+                    <Route exact path="/about" component={About} />
+                    <Route exact path="/products" component={Products} />
+                    <Route exact path="/contact" component={Contact} /> */}
                 </Switch>
-            </BrowserRouter>*/}
+            </BrowserRouter>
         
         </>
     )
 }
+export default App;
