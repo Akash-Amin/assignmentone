@@ -28,9 +28,9 @@ app.get('/about',(req,res)=>{
     res.send("from home");
 });
 
-app.get('/register',(req,res)=>{
-    res.send("from home");
-});
+// app.get('/register',(req,res)=>{
+//     res.send("from home");
+// });
 
 app.listen(PORT,()=>{
     console.log(`listening ${PORT}`);
