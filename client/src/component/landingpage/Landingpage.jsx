@@ -9,24 +9,52 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 
 export default function Landingpage() {
     
-    const [userId,setUserId]=useState("");
-    const [password,setPassword]=useState("");
+  //  const [userId,setUserId]=useState("");
+    //const [password,setPassword]=useState("");
 
-    function loginSubmission(e)
-    {
-        e.preventDefault()
-        alert(`logged in with ${userId} id` )
-        console.log("email",userId)
-        console.log("password",password)
-    }
+
+    const [user , setUser]=useState({
+        name:"",email:"",phone:"",work:"",password:"",cpassword:""
+    })
+    
+    let name,value;
+
     function userIdchange(e)
     {
-        setUserId(e.target.value);
+        // alert(`logged in with ${userId} id` )
+        // console.log("email",userId)
+        // console.log("password",password)
+        name=e.target.name;
+        value=e.target.value;
+
+        setUser({...user,[name]:value})
     }
-    function passwordchange(e)
-    { 
-        setPassword(e.target.value);
+
+    const signUpSubmission = async(e)=>{
+        e.preventDefault();
+
+        const {  name, email, phone, work, password, cpassword  } =user;
+
+        const res = await fetch("/register",{
+            method:"POST",
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body:JSON.stringify({
+                name, email, phone, work, password, cpassword 
+            })
+        });
+        const data = await res.json();
+        if(data.status === 422 || !data)
+        {
+            window.alert("invalid registration");
+            console.log("invalid reg")
+        }else{
+            window.alert("valid registration");
+            console.log("+++valid reg")
+        }
     }
+
     return (
         <div className="Landingpage-main-div">
 
@@ -46,21 +74,30 @@ export default function Landingpage() {
    
     
         
-            <form onSubmit={loginSubmission}>
+            {/* <form onSubmit={loginSubmission}> */}
+            <form  method="POST">
             
             <PermIdentityOutlinedIcon className="Login-input-icon"/>
             
             
-                <input type="email" placeholder="Login Id" onChange={userIdchange}  className="Login-input" required/>
+                <input type="text" placeholder="name" name="name" onChange={userIdchange} value={user.name}  className="Login-input" required/>
                 <br/> <br/>
+                <input type="email" placeholder="email" name="email" onChange={userIdchange} value={user.email}  className="Login-input" required/>
+                <br/> <br/>
+                <input type="number" placeholder="phone" name="phone" onChange={userIdchange} value={user.phone}  className="Login-input" required/>
+                <br/> <br/>
+                <input type="text" placeholder="work" name="work" onChange={userIdchange} value={user.work}  className="Login-input" required/>
+                <br/> <br/>
+                <LockOutlinedIcon className="Login-input-icon"/>
+                
+                <input type="password" placeholder="Password" name="password" onChange={userIdchange} value={user.password}  className="Login-input" required/>
+                <br/><br/>
                
                 <LockOutlinedIcon className="Login-input-icon"/>
                 
-                <input type="password" placeholder="Password"  onChange={passwordchange}  className="Login-input" required/>
+                <input type="password" placeholder="cPassword" name="cpassword"  onChange={userIdchange} value={user.cpassword}  className="Login-input" required/>
                 <br/><br/>
-                <button className="Login-input-button-submission">
-                    
-        <NavLink exact  to="/home" className="Login-input-button">Login</NavLink>
+                <button className="Login-input-button-submission" onClick={signUpSubmission} >Login
                 </button>
                 <br/>
         <NavLink exact  to="/home" className="Login-input-forget-password">Forget Password</NavLink>

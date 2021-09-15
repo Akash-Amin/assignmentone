@@ -1,5 +1,6 @@
 import React from 'react';
 import Landingpage from './component/landingpage/Landingpage';
+import Signinpage from './component/signinpage/Signinpage';
 //import Home from './component/home/Home';
 //import About from './component/about/About';
 //import Products from './component/products/Products';
@@ -18,7 +19,9 @@ const App=()=> {
         
             <BrowserRouter>
                 <Switch>
-                <Route exact path="/" component={Landingpage} />
+                <Route exact path="/register" component={Landingpage} />
+                
+                <Route exact path="/signin" component={Signinpage} />
                     {/* <Route exact path="/home" component={Home} />
                     <Route exact path="/about" component={About} />
                     <Route exact path="/products" component={Products} />
